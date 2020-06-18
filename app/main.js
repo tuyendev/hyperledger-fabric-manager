@@ -5,8 +5,8 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes';
 import { addLocaleData,IntlProvider } from 'react-intl'; 
 import en from 'react-intl/locale-data/en';
-import zh from 'react-intl/locale-data/zh';
-import zh_CN from './message/zh_CN';
+import zh from 'react-intl/locale-data/en';
+import zh_CN from './message/en_US';
 import en_US from './message/en_US';
 
 
@@ -15,8 +15,8 @@ let locale   = "en"
 let messages = en_US
 addLocaleData([...en, ...zh]);
 if(window.location.href.indexOf("zh_CN")!=-1){
-     locale   = "zh"
-     messages = zh_CN
+     locale   = "en"
+     messages = en_US
 }
 const errorReporter = (error, locale, message) =>{ 
     // custom error reporting code here
